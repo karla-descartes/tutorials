@@ -1,5 +1,3 @@
-import numpy as np
-import collections
 import descarteslabs as dl
 import descarteslabs.common.scenes as scn
 
@@ -19,7 +17,6 @@ scenes = scn.search(shape['geometry'],
                     limit=500
                    )
 print("There are {} scenes in the collection.".format(len(scenes)))
-# There are 53 scenes in the collection.
 
 
 # To create subcollections using the Scenes API, we have the built in methods 'each', 'grouby', and 'filter' 
@@ -34,6 +31,14 @@ scenes.each.properties.date.month
 for (year, month), month_scenes in scenes.groupby("properties.date.year", "properties.date.month"):
     print("{} {}: {} scenes".format(year, month, len(month_scenes)))
 
+
+fall_scenes = scenes.filter(lambda s: s.properties.date.month > 8 and s.properties.date.month < 12)
+sprint_scenes = scenes.filter(lambda s: s.properties.date.month > 2 and s.properties.date.month < 6)
+
+print("There are {} Fall scenes & {} Spring scenes.".format(len(fall_scenes), len(sprint_scenes)))
+
+# The output of running this file should look like: 
+# There are 53 scenes in the collection.
 # 2017 5: 6 scenes
 # 2017 6: 4 scenes
 # 2017 7: 8 scenes
@@ -42,9 +47,6 @@ for (year, month), month_scenes in scenes.groupby("properties.date.year", "prope
 # 2017 10: 8 scenes
 # 2017 11: 6 scenes
 # 2017 12: 8 scenes
+# There are 22 Fall scenes & 6 Spring scenes.
 
-# Finally, if you are interseted in returning a unique subset of the SceneCollection, use the filter method along with a lambda to further query the return
-fall_scenes = scenes.filter(lambda s: s.properties.date.month > 8 and s.properties.date.month < 12)
-sprint_scenes = scenes.filter(lambda s: s.properties.date.month > 2 and s.properties.date.month < 6)
 
-print("There are {} Fall scenes & {} Spring scenes.".format(len(fall_scenes), len(sprint_scenes)))
