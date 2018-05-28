@@ -18,7 +18,8 @@ scenes = scn.search(shape['geometry'],
 print("There are {} scenes in the collection, both Sentinel 2 and Landsat 8.".format(len(scenes)))
 
 
-# View the GeospatialContext of the SceneCollection. The GeospatialContext is what ensures the spatial resolution and coordinate system of returned data are comparable, even if their native properties differ.
+# View the GeospatialContext of the SceneCollection. The GeospatialContext is what ensures the spatial resolution,
+# geometry, and coordinate system of returned data are comparable, even if their native properties differ.
 print(scenes.ctx)
 
 # Get unique information about the number of scenes by product
