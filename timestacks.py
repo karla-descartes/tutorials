@@ -1,15 +1,41 @@
 import descarteslabs as dl
-import descarteslabs.common.scenes as scn
 
 
-
-# Get the geometry of Taos from 
-matches = dl.places.find('new-mexico_taos')
-aoi = matches[0]
-shape = dl.places.shape(aoi['slug'], geom='low')
+# Define a bounding box around Taos in a GeoJSON
+taos = {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.71868896484375,
+              36.33725319397006
+            ],
+            [
+              -105.2105712890625,
+              36.33725319397006
+            ],
+            [
+              -105.2105712890625,
+              36.73668306473141
+            ],
+            [
+              -105.71868896484375,
+              36.73668306473141
+            ],
+            [
+              -105.71868896484375,
+              36.33725319397006
+            ]
+          ]
+        ]
+      }
+    }
 
 # Create a SceneCollection  
-scenes = scn.search(shape['geometry'],
+scenes, ctx = dl.scenes.search(taos['geometry'],
                     products="landsat:LC08:01:RT:TOAR",
                     start_datetime="2017-01-01",
                     end_datetime="2017-12-31",
@@ -27,26 +53,14 @@ print("There are {} scenes in the collection.".format(len(scenes)))
 scenes.each.properties.date.month
 
 
-# Similarly, if we want to create multple subsets based on those properties, we can use the groupby method
+# Similarly, if we want to create multiple subsets based on those properties, we can use the 'groupby' method
 for (year, month), month_scenes in scenes.groupby("properties.date.year", "properties.date.month"):
     print("{} {}: {} scenes".format(year, month, len(month_scenes)))
 
 
+# You can further group the subsets using the built in 'method' filter 
 fall_scenes = scenes.filter(lambda s: s.properties.date.month > 8 and s.properties.date.month < 12)
 sprint_scenes = scenes.filter(lambda s: s.properties.date.month > 2 and s.properties.date.month < 6)
 
 print("There are {} Fall scenes & {} Spring scenes.".format(len(fall_scenes), len(sprint_scenes)))
-
-# The output of running this file should look like: 
-# There are 53 scenes in the collection.
-# 2017 5: 6 scenes
-# 2017 6: 4 scenes
-# 2017 7: 8 scenes
-# 2017 8: 5 scenes
-# 2017 9: 8 scenes
-# 2017 10: 8 scenes
-# 2017 11: 6 scenes
-# 2017 12: 8 scenes
-# There are 22 Fall scenes & 6 Spring scenes.
-
 
