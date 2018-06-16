@@ -9,8 +9,8 @@ images = ['landsat:LC08:01:RT:TOAR:meta_LC08_L1TP_035037_20180602_20180602_01_RT
 # The Raster API call to download an image mosaic. Other parameters are available
 dl.raster.raster(
 	inputs=images,
-	bands=['red', 'green', 'blue', 'swir2'],
-	scales=[[0,5500], [0, 5500], [0, 5500], [0, 5500]],
+	bands=['red', 'green', 'blue', 'alpha'],
+	scales=[[0,5500], [0, 5500], [0, 5500], None],
 	data_type='Byte',
 	cutline=box['features'][0]['geometry'],
 	save=True,
