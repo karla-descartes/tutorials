@@ -21,12 +21,15 @@ Once you have a static XYZ URL, you can add it to any number of map applications
  GeoVisual Search   
 ******************
 
-GeoVisual Search 
+GeoVisual Search (GVS) is the Descartes Labs computer vision product used to detect features on the earth surface based on a sample. Our `Search interface <http://search.descarteslabs.com/>`_ is powered by the same intelligent object detection technology, enabling a user to place a bounding box around a feature anywhere in the US (covered with high resolution imagery). It returns a subset of the top visual matches. Try finding all the substations in the US. 
 
 ***************
  Catalog 
 ***************
 
+The Descartes Labs `Catalog <https://catalog.descarteslabs.com/?/>`_ exposes a products' metadata through a tabular interface. This includes, but is not limited to, things like the valid time range, data about native and derived bands, the total amount of data available, and spatial resolutions. The Catalog is also where a user can control the permissions for products they own, allowing you to share imagery with an individual user, an organization, or the general public. Additionally, you can open products in Viewer directly from a products' information page. 
+
 ***************
  Monitor  
 ***************
+If you use our scalable Tasks API, you will definitely want to use `Monitor <https://monitor.descarteslabs.com/>`_ to see how the tasks are progressing. The interface tracks the number of tasks submitted, the number of workers launched, and the status of each task. Upon completion, you can also access each individual tasks' log to see errors or other console print outs. 
