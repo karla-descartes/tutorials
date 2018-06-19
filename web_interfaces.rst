@@ -28,4 +28,4 @@ The Descartes Labs `Catalog <https://catalog.descarteslabs.com/?/>`_  is a list 
 ***************
  Monitor  
 ***************
-If you use our scalable Tasks API, `Monitor <https://monitor.descarteslabs.com/>`_ allows you to track how tasks are progressing. The interface tracks the number of tasks submitted, the number of workers launched, and the status of each task. Upon completion, you can also access each individual task's log to see errors or other console print outs. 
+If you use our scalable Tasks API, `Monitor <https://monitor.descarteslabs.com/>`_ allows you to track how tasks are progressing. The interface reports the number of tasks submitted, the number of workers launched, and the status of each task. Upon completion, you can also access each individual task's log to see errors or other console print outs. 
