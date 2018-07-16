@@ -2,11 +2,7 @@ import descarteslabs as dl
 
 
 # Define a bounding box around Taos in a GeoJSON
-taos = {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
+taos = {"type": "Polygon",
         "coordinates": [
           [
             [
@@ -32,13 +28,12 @@ taos = {
           ]
         ]
       }
-    }
 
 # Create a SceneCollection  
 scenes, ctx = dl.scenes.search(taos['geometry'],
                     products="landsat:LC08:01:RT:TOAR",
-                    start_datetime="2017-01-01",
-                    end_datetime="2017-12-31",
+                    start_datetime="2018-01-01",
+                    end_datetime="2018-12-31",
                     cloud_fraction=0.7,
                     limit=500
                    )
@@ -59,8 +54,8 @@ for (year, month), month_scenes in scenes.groupby("properties.date.year", "prope
 
 
 # You can further group the subsets using the built in 'method' filter 
+spring_scenes = scenes.filter(lambda s: s.properties.date.month > 2 and s.properties.date.month < 6)
 fall_scenes = scenes.filter(lambda s: s.properties.date.month > 8 and s.properties.date.month < 12)
-sprint_scenes = scenes.filter(lambda s: s.properties.date.month > 2 and s.properties.date.month < 6)
 
-print("There are {} Fall scenes & {} Spring scenes.".format(len(fall_scenes), len(sprint_scenes)))
+print("There are {} Spring scenes & {} Fall scenes.".format(len(spring_scenes), len(fall_scenes)))
 
