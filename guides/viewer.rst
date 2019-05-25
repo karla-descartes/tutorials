@@ -15,7 +15,7 @@ Adding a New Layer
 
 In the map menu click the ‘Add Layer’ button. Find the Landsat-7 Top of Atmospheric Reflection product (‘landsat:LE07:01:RT:TOAR’ ). You can manually select the date range. Here, the date range is set to encompass June 2018.  
 
-.. figure:: static_images/add-layer.jpg
+.. figure:: static_images/add-layer.png
    :scale: 100 %
    :alt: add new imagery layer
 
