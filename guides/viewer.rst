@@ -19,8 +19,6 @@ In the map menu click the ‘Add Layer’ button. Find the Landsat-7 Top of Atmo
    :scale: 100 %
    :alt: add new imagery layer
 
-   Add new imagery layer
-
 
 Changing a Layer’s Opacity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
