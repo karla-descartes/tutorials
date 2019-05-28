@@ -1,4 +1,3 @@
-
 Accessing Product Information from Viewer
 ==========================
 
@@ -32,7 +31,7 @@ GOES-16 has an incredible temporal resolution. To browse datasets temporally, us
 
 Toggling Scene Outlines
 ~~~~~~~~~~~~~~~~~~~~~~~
-To toggle scene outlines, click the third button from the right by a layers name in the map menu.
+To toggle scene outlines, click the third button from the right by a layer's name in the map menu.
 
 Turning map labels on and off
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,7 +41,7 @@ Toggle the placenames and boundaries on and off, click flag icon in the top righ
 Exploring Band combinations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the Viewer window, click the ellipsis beside a layer. Next, click “Edit Layer” to access product information and configurations. Inside of the menu, you will see information contained about the selected layer.  Under the “Products” field you will see the product id.  You can use this product id and date range to query for scenes. Play around with different band combinations (*NIR and SWIR2 are great to look at in Sentinel-2 and Landsat-8).
+In the Viewer window, click the ellipsis beside a layer. Next, click “Edit Layer” to access product information and configurations. Inside of the menu, you will see information contained about the selected layer.  Under the “Products” field you will see the product id.  You can use this product id and date range to query for scenes. Play around with different band combinations (NIR and SWIR2 are great to look at in Sentinel-2 and Landsat-8).
 
 
 Feature Metadata
@@ -61,9 +60,7 @@ Users can add polygons, points, squares and line vector features to your Viewer 
 
 Saving &  Loading geojson files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-On the side of the Viewer window, click to save features that were created using the draw function.  You may have to select individual features using. The features will be saved to your downloads folder as a .geojson.
-
-To load a .geojson into viewer, click the "Upload features" button. 
+On the side of the Viewer window, click to save features that were created using the draw function. The features will be saved to your downloads folder as a .geojson. To load a .geojson into viewer, click the "Upload features" button. 
 
 
 Sharing your Viewer Link
@@ -73,4 +70,4 @@ In the top right hand corner of the Viewer window find the arrow icon. To get th
 
 Finding the TMS link for Analytics Studio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Users can export layers from Viewer to Analytics Studio. Click next to the layer to export and then click the option to Export the layer. A dialog box will appear that has the option to copy three different types of static urls:  TMS URL, ArcGIS Tile Layer URL and a Tableau TMS XML URL. Copy the TMS URL using the clipboard icon. Open up `Analytics Studio <https://analytics.descarteslabs.com/>`_ In `Map Settings` expand the options for Base Map.  Choose the option for `Add Custom Basemap.`Paste in your TMS URL into the first field. Then click `Add Basemap.`
+Users can export layers from Viewer to Analytics Studio. Click the ellipsis beside a layer and select “Export Layer”. A dialog box will appear that has the option to copy three different types of static urls:  TMS URL, ArcGIS Tile Layer URL and a Tableau TMS XML URL. Copy the TMS URL using the clipboard icon. Open up `Analytics Studio <https://analytics.descarteslabs.com/>`_ In `Map Settings` expand the options for Base Map.  Choose the option for `Add Custom Basemap.` Paste in your TMS URL into the first field. Then click `Add Basemap.`
