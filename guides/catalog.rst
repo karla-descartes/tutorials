@@ -1,7 +1,7 @@
 Using Catalog to Search for Imagery
 ==========================
 
-Our `Catalog <https://catalog.descarteslabs.com/?/>`_  interface allows users to search data products available on the Platform.  Utilizing Catalog is a great way to become familiar with data products and their metadata. It also allows users to manage their own datasets. All raster products uniquely available or owned by a user are shown in Catalog.  You have the option to toggle between "Descartes Labs products: as well as "My products".  
+Our `Catalog <https://catalog.descarteslabs.com/?/>`_  interface allows users to search data products available on the Platform.  Utilizing Catalog is a great way to become familiar with data products and their metadata. It also allows users to manage their own datasets. All raster products uniquely available or owned by a user are shown in Catalog.  You have the option to toggle between "Descartes Labs products" as well as "My products".  
 
 View Product Details 
 ~~~~~~~~~~~~~~~~~~~~
