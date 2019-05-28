@@ -12,7 +12,7 @@ Toggle a layer’s visibility on and off using the button to the left of the lay
 Adding a New Layer
 ~~~~~~~~~~~~~~~~~~
 
-In the map menu click the ‘Add Layer’ button. Find the Landsat-7 Top of Atmospheric Reflection product (‘landsat:LE07:01:RT:TOAR’ ). You can manually select the date range. Here, the date range is set to encompass June 2018.  
+In the map menu click the ‘Add Layer’ button. Find the Landsat-7 Top of Atmospheric Reflection product (‘landsat:LE07:01:RT:TOAR’ ). You can manually select the date range.  
 
 .. figure:: static_images/add-layer.png
    :scale: 100 %
@@ -35,7 +35,7 @@ To toggle scene outlines, click the third button from the right by a layer's nam
 
 Turning map labels on and off
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Toggle the placenames and boundaries on and off, click flag icon in the top right corner of the layer window. 
+Toggle the placenames and boundaries on and off by clicking the flag icon in the top right corner of the layer window. 
 
 
 Exploring Band combinations
@@ -46,7 +46,7 @@ In the Viewer window, click the ellipsis beside a layer. Next, click “Edit Lay
 
 Feature Metadata
 ~~~~~~~~~~~~~~~~
-To find the complete metadata associated with a feature, select the comment box icon in the top right hand corner of the layer window and click on an image to access the complete metadata associated with a feature.  
+To find the complete metadata associated with a feature, select the comment box icon in the top right hand corner of the layer window and click on an image to view its metadata.  
 
 Searching for Locations
 ~~~~~~~~~~~~~~~~~~~~~~~
